@@ -1,0 +1,13 @@
+base
+pgo
+*.gcda
+.idea/
+
+perf.data
+perf.data.old
+
+# hot-cold code-gen
+hot-cold-relocation/coldcalls.cpp
+hot-cold-relocation/definitions.cpp
+hot-cold-relocation/warmcalls.cpp
+
