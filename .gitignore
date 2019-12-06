@@ -6,8 +6,11 @@ pgo
 perf.data
 perf.data.old
 
-# hot-cold code-gen
+# hot-cold-function-relocation code-gen
 hot-cold-function-relocation/coldcalls.cpp
 hot-cold-function-relocation/definitions.cpp
 hot-cold-function-relocation/warmcalls.cpp
 
+# hot-cold-function-splitting code-gen
+hot-cold-function-splitting/calls.cpp
+hot-cold-function-splitting/definitions.cpp
