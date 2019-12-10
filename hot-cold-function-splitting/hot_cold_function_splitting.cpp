@@ -4,7 +4,7 @@
 #include "definitions.cpp"
 
 int main(int argc, char** argv) {
-    bool flag = argv[0][0] == '1';
+    bool flag = argv[1][0] == '1';
 
     std::uint64_t value = 123;
 
