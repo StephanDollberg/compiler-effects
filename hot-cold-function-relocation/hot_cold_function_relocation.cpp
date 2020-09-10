@@ -3,15 +3,12 @@
 
 #include "definitions.cpp"
 
-int main() {
-    std::random_device rd;
-    std::mt19937 gen(rd());
-    std::uniform_int_distribution<> dis(1, 100);
+int main(int, char** argv) {
+    const bool flag = argv[1][0] == '1';
 
     std::int64_t res = 0;
     for (int i = 0; i < 10000; ++i) {
-        int rand = dis(gen);
-        if (rand > 5) {
+        if (flag) {
 #include "warmcalls.cpp"
         }
         else
