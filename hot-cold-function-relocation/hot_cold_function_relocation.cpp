@@ -1,5 +1,5 @@
 #include <cstdio>
-#include <random>
+#include <cstdint>
 
 #include "definitions.cpp"
 
