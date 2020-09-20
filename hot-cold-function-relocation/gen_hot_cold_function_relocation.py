@@ -2,14 +2,24 @@
 count = 2000
 
 data = '''
-std::int64_t __attribute__ ((noinline)) hotXXX(std::int64_t in)
+std::int64_t __attribute__ ((noinline)) hotXXX(std::int64_t input)
 {
-    return in + XXX;
+    input ^= (input >> 33);
+    input *= 0xff51afd7ed558ccd + XXX;
+    input ^= (input >> 33);
+    input *= 0xc4ceb9fe1a85ec53 + XXX;
+    input ^= (input >> 33);
+    return input;
 }
 
-std::int64_t __attribute__ ((noinline)) coldXXX(std::int64_t in)
+std::int64_t __attribute__ ((noinline)) coldXXX(std::int64_t input)
 {
-    return in - XXX * 3;
+    input ^= (input >> 33);
+    input *= 0xff51afd7ed558ccd + XXX * 2;
+    input ^= (input >> 33);
+    input *= 0xc4ceb9fe1a85ec53 + XXX * 3;
+    input ^= (input >> 33);
+    return input;
 }
 '''
 
