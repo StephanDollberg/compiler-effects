@@ -12,7 +12,6 @@ std::uint64_t __attribute__ ((noinline)) funcXXX(std::uint64_t input, bool flag)
 
     if (flag)
     {
-        input ^= (input >> 33);
         input *= 0xff51afd7ed558cc3 + XXX;
         input ^= (input >> 33);
         input *= 0xc4ceb9fe1a85ec51 + XXX;
@@ -20,9 +19,9 @@ std::uint64_t __attribute__ ((noinline)) funcXXX(std::uint64_t input, bool flag)
         input *= 0xff51afd7ed558ce3 + XXX;
         input ^= (input >> 33);
         input *= 0xc4ceb9fe1a85ec41 + XXX;
+        input ^= (input >> 33);
     }
 
-    input ^= (input >> 33);
     input *= 0xff51afd7ed558ccf + XXX;
     input ^= (input >> 33);
     input *= 0xc4ceb9fe1a85ec52 + XXX;
