@@ -2,7 +2,8 @@
 count = 2000
 
 data = '''
-std::uint64_t __attribute__ ((noinline)) funcXXX(std::uint64_t input, bool flag)
+[[gnu::noinline]]
+std::uint64_t funcXXX(std::uint64_t input, bool flag)
 {
     input ^= (input >> 33);
     input *= 0xff51afd7ed558ccd + XXX;

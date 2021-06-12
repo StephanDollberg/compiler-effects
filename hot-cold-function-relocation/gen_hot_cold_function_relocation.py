@@ -2,7 +2,8 @@
 count = 2000
 
 data = '''
-std::int64_t __attribute__ ((noinline)) hotXXX(std::int64_t input)
+[[gnu::noinline]]
+std::int64_t hotXXX(std::int64_t input)
 {
     input ^= (input >> 33);
     input *= 0xff51afd7ed558ccd + XXX;
@@ -12,7 +13,8 @@ std::int64_t __attribute__ ((noinline)) hotXXX(std::int64_t input)
     return input;
 }
 
-std::int64_t __attribute__ ((noinline)) coldXXX(std::int64_t input)
+[[gnu::noinline]]
+std::int64_t coldXXX(std::int64_t input)
 {
     input ^= (input >> 33);
     input *= 0xff51afd7ed558ccd + XXX * 2;

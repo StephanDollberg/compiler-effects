@@ -18,7 +18,8 @@ struct Divider : ICalculator {
     }
 };
 
-std::int64_t __attribute__ ((noinline)) calculate(ICalculator* calculator, std::int64_t input) {
+[[gnu::noinline]]
+std::int64_t calculate(ICalculator* calculator, std::int64_t input) {
     return calculator->calculate(input);
 }
 
