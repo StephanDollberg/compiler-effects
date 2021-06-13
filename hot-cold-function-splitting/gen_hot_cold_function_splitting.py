@@ -2,7 +2,6 @@
 count = 2000
 
 data = '''
-[[gnu::noinline]]
 std::uint64_t funcXXX(std::uint64_t input, bool flag)
 {
     input ^= (input >> 33);
