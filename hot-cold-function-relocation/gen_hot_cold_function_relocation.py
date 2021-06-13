@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import random
 count = 2000
 
 data = '''
@@ -29,11 +30,13 @@ with open('definitions.cpp', 'w') as f:
     for i in range(1, count + 1):
         f.write(data.replace('XXX', str(i)))
 
+indexes = list(range(1, count + 1))
+random.Random(0).shuffle(indexes)
 
 with open('warmcalls.cpp', 'w') as f:
-    for i in range(1, count + 1):
+    for i in indexes:
         f.write('res = hot{i}(res);\n'.format(i=i))
 
 with open('coldcalls.cpp', 'w') as f:
-    for i in range(1, count + 1):
+    for i in indexes:
         f.write('res = cold{i}(res);\n'.format(i=i))
