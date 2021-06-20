@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+if type -t bench 2>/dev/null; then
+	bench ./cold_test_*
+else
+	./cold_test_*
+fi
