@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-count = 2000
+count = 10000
 
 data = '''
 std::uint64_t funcXXX(std::uint64_t input, bool flag)

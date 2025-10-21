@@ -35,7 +35,7 @@ int main(int, char** argv) {
     }
 
     std::uint64_t res = 1;
-    for (int i = 0; i < 10000000; ++i) {
+    for (int i = 0; i < 1000000000; ++i) {
         res += calculate(calculator, res);
     }
 

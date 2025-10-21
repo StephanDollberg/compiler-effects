@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 import random
-count = 2000
+count = 10000
 
 data = '''
 [[gnu::noinline]]
